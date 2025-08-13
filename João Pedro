@@ -1,0 +1,10 @@
+MyName = "João Pedro"
+MyHeight = 1.80
+MyAge = 17
+MyWeight is = 63
+print("Meu nome é", MyName)
+print("A minha altura é", MyHeight, "metros")
+print("Minha idade é", MyAge, "anos")
+print("Meu peso é", MyWeight is)
+
+print("1.80")
