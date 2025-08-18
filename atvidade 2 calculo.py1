@@ -1,0 +1,13 @@
+# Programa para verificar se o usuário pode comprar um produto com base no saldo da conta
+Entrada: saldo da conta bancária
+saldo = float(input("Digite o saldo da sua conta bancária (R$): "))
+Entrada: valor do produto desejado
+valor_produto = float(input("Digite o valor do produto que deseja comprar (R$): "))
+ Verifica se o saldo é suficiente
+if saldo >= valor_produto:
+    saldo_restante = saldo - valor_produto
+    print(f"\nCompra aprovada! Produto comprado por R$ {valor_produto:.2f}.")
+    print(f"Saldo restante na conta: R$ {saldo_restante:.2f}")
+else:
+    print(f"\nCompra negada! Saldo insuficiente.")
+    print(f"Seu saldo é R$ {saldo:.2f}, mas o produto custa R$ {valor_produto:.2f}.")
