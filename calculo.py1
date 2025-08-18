@@ -1,0 +1,10 @@
+numero1 = float(input("Digite o primeiro número: "))
+numero2 = float(input("Digite o segundo número: "))
+
+# Operações solicitadas
+soma_por_5 = numero1 + 5
+subtracao_por_3 = numero2 - 3
+
+# Saída dos resultados
+print(f"\nResultado da soma do primeiro número com 5: {soma_por_5}")
+print(f"Resultado da subtração do segundo número por 3: {subtracao_por_3}")
