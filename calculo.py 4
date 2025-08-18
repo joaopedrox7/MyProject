@@ -1,0 +1,8 @@
+# Programa para calcular a idade que o usuário terá em 2040
+ano_nascimento = int(input("Digite o ano em que você nasceu: "))
+
+ Cálculo da idade em 2040
+idade_em_2040 = 2040 - ano_nascimento
+
+ Saída: exibe o resultado
+print(f"\nEm 2040, você terá {idade_em_2040} anos.")
