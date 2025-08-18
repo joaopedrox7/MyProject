@@ -1,0 +1,10 @@
+numero = float(input("Digite um número: "))
+
+# Cálculo do quadrado e do cubo
+quadrado = numero ** 2
+cubo = numero ** 3
+
+# Saída: exibição dos resultados
+print(f"\nNúmero digitado: {numero}")
+print(f"Quadrado: {quadrado}")
+print(f"Cubo: {cubo}")
