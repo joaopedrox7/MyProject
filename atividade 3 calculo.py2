@@ -1,0 +1,22 @@
+# Programa de recomendação por semana
+dia = input("Digite o dia da semana: ").strip().lower()
+Verificação se o usuário digitou algo
+if dia == "":
+    print("Alerta: Você não digitou nada. Por favor, informe um dia da semana.")
+else:
+    if dia == "segunda":
+        print("Segunda-feira: Que tal começar a semana com um bom planejamento?")
+    elif dia == "terça":
+        print("Terça-feira: Dia ótimo para colocar as tarefas em dia!")
+    elif dia == "quarta":
+        print("Quarta-feira: Perfeita para estudar ou aprender algo novo.")
+    elif dia == "quinta":
+        print("Quinta-feira: Aproveite para ouvir um podcast interessante.")
+    elif dia == "sexta":
+        print("Sexta-feira: Que tal sair para comer algo gostoso?")
+    elif dia == "sábado":
+        print("Sábado: Aproveite o dia para se divertir ou descansar!")
+    elif dia == "domingo":
+        print("Domingo: Ideal para relaxar e recarregar as energias para a semana.")
+    else:
+        print("Dia inválido! Por favor, digite um dia da semana válido.")
