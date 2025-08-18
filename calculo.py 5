@@ -1,0 +1,17 @@
+# Programa para multiplicar os dois primeiros valores e dividir pelo terceiro
+ Entrada: três valores digitados pelo usuário
+valor1 = float(input("Digite o primeiro valor: "))
+valor2 = float(input("Digite o segundo valor: "))
+valor3 = float(input("Digite o terceiro valor: "))
+ Verificação: não pode dividir por zero
+if valor3 == 0:
+    print("\nErro: Não é possível dividir por zero.")
+else:
+    Multiplica os dois primeiros valores
+    resultado_multiplicacao = valor1 * valor2
+
+    Divide o resultado pelo terceiro valor
+    resultado_final = resultado_multiplicacao / valor3
+    Exibe o resultado
+    print(f"\nResultado da multiplicação: {resultado_multiplicacao}")
+    print(f"Resultado final (dividido pelo terceiro valor): {resultado_final}")
