@@ -1,0 +1,17 @@
+valor_produto = float(input("Digite o valor do produto (R$): "))
+
+# Entrada: quantidade de prestações
+quantidade_prestacoes = int(input("Digite a quantidade de prestações: "))
+
+# Verificação básica
+if quantidade_prestacoes <= 0:
+    print("A quantidade de prestações deve ser maior que zero.")
+else:
+    # Cálculo do valor de cada prestação
+    valor_prestacao = valor_produto / quantidade_prestacoes
+
+    # Saída formatada
+    print(f"\nValor total do produto: R$ {valor_produto:.2f}")
+    print(f"Quantidade de prestações: {quantidade_prestacoes}")
+    print(f"Valor de cada prestação: R$ {valor_prestacao:.2f}")
+    
