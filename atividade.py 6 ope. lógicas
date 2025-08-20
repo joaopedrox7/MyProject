@@ -1,0 +1,34 @@
+def avalia_nota(nota):
+    if nota == 1:
+        return "Péssimo"
+    elif nota == 2:
+        return "Ruim"
+    elif nota == 3:
+        return "Razoável"
+    elif nota == 4:
+        return "Bom"
+    elif nota == 5:
+        return "Ótimo"
+    else:
+        return None
+
+print("Avaliação de Serviços (estilo Pedra, Papel e Tesoura)")
+
+servico = input("O serviço foi prestado? (sim/não): ").strip().lower()
+
+if servico == "sim":
+    try:
+        nota = int(input("Digite sua nota de 1 a 5: "))
+        resultado = avalia_nota(nota)
+        if resultado:
+            print(f"Sua avaliação foi: {resultado}")
+        else:
+            print("Nota inválida! Escolha um número entre 1 e 5.")
+    except ValueError:
+        print("Por favor, digite um número válido.")
+elif servico == "não":
+    print("Você optou por reclamar.")
+    reclamacao = input("Descreva sua reclamação: ")
+    print("Obrigado! Sua reclamação foi registrada.")
+else:
+    print("Resposta inválida, digite apenas 'sim' ou 'não'.")

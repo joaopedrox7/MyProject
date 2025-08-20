@@ -1,0 +1,11 @@
+funcao = input("Digite a função que você pode exercer no jogo de futebol: ").lower().strip()
+
+# Verificação da função e exibição da mensagem correspondente
+if funcao in ["goleiro", "zagueiro", "lateral"]:
+    print("Defesa!")
+elif funcao in ["ala", "volante", "meia"]:
+    print("Meio-Campo!")
+elif funcao in ["ponta", "atacante", "centroavante"]:
+    print("Ataque!")
+else:
+    print("Teimoso!")

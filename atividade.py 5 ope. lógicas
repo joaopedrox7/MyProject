@@ -1,0 +1,29 @@
+servico_prestado = input("O serviço foi prestado? (sim/não): ").strip().lower()
+
+if servico_prestado == "sim":
+    try:
+        nota = int(input("Digite a nota de avaliação (1 a 5): "))
+
+        if nota == 1:
+            print("Você avaliou como: Péssimo.")
+        elif nota == 2:
+            print("Você avaliou como: Ruim.")
+        elif nota == 3:
+            print("Você avaliou como: Razoável.")
+        elif nota == 4:
+            print("Você avaliou como: Bom.")
+        elif nota == 5:
+            print("Você avaliou como: Ótimo.")
+        else:
+            print("Nota inválida. A nota deve ser um número entre 1 e 5.")
+    except ValueError:
+        print("Entrada inválida. Por favor, digite um número entre 1 e 5.")
+
+elif servico_prestado == "não":
+    nota = 0
+    print(f"Nota atribuída: {nota}")
+    reclamacao = input("Descreva sua reclamação: ")
+    print("Obrigado por sua reclamação. Ela será analisada.")
+
+else:
+    print("Resposta inválida. Por favor, responda apenas com 'sim' ou 'não'.")

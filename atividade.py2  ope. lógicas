@@ -1,0 +1,11 @@
+X = int(input("Digite o primeiro número (X): "))
+Y = int(input("Digite o segundo número (Y): "))
+Z = int(input("Digite o terceiro número (Z): "))
+
+# Verificação de ordem
+if X < Y < Z:
+    print("Os números estão em ordem crescente.")
+elif X > Y > Z:
+    print("Os números estão em ordem decrescente.")
+else:
+    print("Eles estão misturados!")
