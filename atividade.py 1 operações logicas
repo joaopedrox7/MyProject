@@ -14,6 +14,5 @@ elif 17 <= posicao <= 20:
     classificacao = "Rebaixado"
 else:
     classificacao = "Posição inválida. Deve ser entre 1 e 20."
-
-# Resultado
+ Resultado
 print(f"\nO time {time} está na {posicao}ª posição: {classificacao}")
