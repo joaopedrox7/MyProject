@@ -1,0 +1,19 @@
+time = input("Digite o nome do time: ")
+posicao = int(input("Digite a posição do time na tabela (1 a 20): "))
+
+ Verificação da classificação
+if posicao == 1:
+    classificacao = "Campeão!"
+elif 2 <= posicao <= 6:
+    classificacao = "Libertadores!"
+elif 7 <= posicao <= 12:
+    classificacao = "Sul-Americana!"
+elif 13 <= posicao <= 16:
+    classificacao = "Fora de competições internacionais."
+elif 17 <= posicao <= 20:
+    classificacao = "Rebaixado"
+else:
+    classificacao = "Posição inválida. Deve ser entre 1 e 20."
+
+# Resultado
+print(f"\nO time {time} está na {posicao}ª posição: {classificacao}")
