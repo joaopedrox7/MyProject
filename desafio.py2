@@ -1,0 +1,34 @@
+def verificar_aposentadoria():
+    print("=== Verificador de Aposentadoria ===")
+    
+    sexo = input("Informe o sexo (M para masculino, F para feminino): ").strip().upper()
+    idade = int(input("Informe a idade: "))
+    tempo_contribuicao = int(input("Informe o tempo de contribuição (em anos): "))
+    
+    insalubridade = input("Trabalhou em atividade insalubre por mais de 15 anos? (S/N): ").strip().upper()
+    
+    if sexo not in ['M', 'F']:
+        print("Sexo inválido. Use M ou F.")
+        return
+    
+    pontos = idade + tempo_contribuicao
+    
+    Ajuste por insalubridade
+    desconto_insalubridade = 5 if insalubridade == 'S' else 0
+
+    if sexo == 'M':
+        pontos_necessarios = 105 - desconto_insalubridade
+    else:
+        pontos_necessarios = 100 - desconto_insalubridade
+
+    print(f"\nTotal de pontos: {pontos}")
+    print(f"Pontos necessários para aposentadoria: {pontos_necessarios}")
+
+    if pontos >= pontos_necessarios:
+        print("Você está apto(a) a se aposentar!")
+    else:
+        print("Você ainda não tem os requisitos para se aposentar.")
+        print(f"Faltam {pontos_necessarios - pontos} pontos.")
+
+ Executa o programa
+verificar_aposentadoria()
