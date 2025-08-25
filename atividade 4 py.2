@@ -1,0 +1,12 @@
+# Define a resposta correta...
+resposta_correta = "Flamengo"
+
+# Loop até o usuário acertar
+while True:
+    resposta = input("Qual é o melhor clube de futebol do Brasil? ").strip()
+
+    if resposta.lower() == resposta_correta.lower():
+        print("\n Parabéns! Você acertou! Realmente, o melhor clube do Brasil é o", resposta_correta + "!")
+        break
+    else:
+        print("Resposta incorreta. Tente novamente!\n")
