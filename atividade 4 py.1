@@ -1,0 +1,13 @@
+# Solicita ao usuário que insira um número...
+numero = int(input("Digite um número para ver sua tabuada: "))
+
+print("\n" + "="*30)
+print(f"  🧮 Tabuada do {numero}")
+print("="*30)
+
+# Gera e exibe a tabuada de 1 a 10
+for i in range(1, 11):
+    resultado = numero * 1
+    print(f"{numero:2} x {i:2} = {resultado:3}")
+
+print("="*30)
