@@ -1,0 +1,9 @@
+# Inicializa os dois primeiros termos da sequência
+a, b = 0, 1
+
+print("Sequência de Fibonacci até 2000:\n")
+
+# Enquanto o valor atual for menor ou igual a 2000
+while a <= 2000:
+    print(a, end=" ")
+    a, b = b, a + b  # Atualiza os dois valores para o próximo passo
