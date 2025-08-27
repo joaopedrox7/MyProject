@@ -1,0 +1,25 @@
+def verificar_par_ou_impar(soma):
+    if soma % 2 == 0:
+        return "par"
+    else:
+        return "ímpar"
+
+def jogar_par_ou_impar():
+    print(" Bem-vindo ao jogo de Par ou Ímpar!")
+    
+    try:
+        numero_computador = int(input("Digite o número escolhido pelo computador (simulando número aleatório): "))
+        numero_usuario = int(input("Digite o seu número: "))
+        
+        soma = numero_computador + numero_usuario
+        resultado = verificar_par_ou_impar(soma)
+        
+        print(f"\n Soma dos números: {numero_computador} + {numero_usuario} = {soma} ({resultado.upper()})")
+        
+        if resultado == "par":
+            print(" Você venceu! A soma é PAR.")
+        else:
+            print(" O computador venceu! A soma é ÍMPAR.")
+    
+    except ValueError:
+        print(" Entrada inválida. Digite apenas números inteiros.")

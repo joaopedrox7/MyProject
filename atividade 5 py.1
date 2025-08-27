@@ -1,0 +1,24 @@
+ef listar_carros_e_precos():
+    print("\n Lista de Carros e seus Preços:")
+    carros = {
+        "Fiat Argo": "R$ 72.000",
+        "Chevrolet Onix": "R$ 78.000",
+        "Volkswagen Polo": "R$ 85.000",
+        "Toyota Corolla": "R$ 148.000",
+        "Jeep Compass": "R$ 168.000"
+    }
+    for carro, preco in carros.items():
+        print(f"{carro} - {preco}")
+
+def main():
+    try:
+        idade = int(input("Digite sua idade: "))
+        if idade < 0:
+            print(" Idade inválida. Por favor, digite um número positivo.")
+        elif idade < 18:
+            listar_programas_infantis()
+        else:
+            listar_carros_e_precos()
+    except ValueError:
+        print(" Por favor, digite apenas números inteiros.")
+        
