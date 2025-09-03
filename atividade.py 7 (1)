@@ -1,0 +1,25 @@
+# Lista com as respostas corretas
+GABARITO = ['B', 'C', 'A', 'E', 'D']
+
+# Lista para armazenar as respostas do usuário
+respostas_usuario = []
+
+# Coletando as respostas do usuário
+print("Digite suas respostas para as 5 questões (letras de A a E):")
+for i in range(5):
+    resposta = input(f"Resposta da questão {i+1}: ").strip().upper()
+    
+    # Verifica se a resposta é válida
+    while resposta not in ['A', 'B', 'C', 'D', 'E']:
+        resposta = input(f"Resposta inválida. Digite novamente a resposta da questão {i+1} (A, B, C, D ou E): ").strip().upper()
+    
+    respostas_usuario.append(resposta)
+
+# Verificando a quantidade de acertos
+acertos = 0
+for i in range(5):
+    if respostas_usuario[i] == GABARITO[i]:
+        acertos += 1
+
+# Exibindo o resultado
+print(f"\nVocê acertou {acertos} de 5 questões.")

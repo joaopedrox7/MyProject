@@ -1,0 +1,49 @@
+# Lista para armazenar a escalação
+escalação = []
+
+# Função para exibir a escalação formatada
+def exibir_escalação(jogadores):
+    print("\n--- Escalação Atual ---")
+    for i, jogador in enumerate(jogadores, start=1):
+        print(f"{i}. Camisa {jogador['camisa']}: {jogador['nome']}")
+
+# Coleta da escalação inicial
+print("Digite a escalação inicial dos 11 jogadores:")
+for i in range(11):
+    nome = input(f"Nome do jogador {i+1}: ").strip()
+    camisa = input(f"Número da camisa do jogador {i+1}: ").strip()
+    escalação.append({"nome": nome, "camisa": camisa})
+
+# Exibe a escalação inicial
+exibir_escalação(escalação)
+
+# Intervalo - Substituições
+print("\n--- Intervalo ---")
+substituições_feitas = 0
+
+while substituições_feitas < 3:
+    opcao = input(f"Deseja fazer a substituição {substituições_feitas+1}? (s/n): ").strip().lower()
+    if opcao == 'n':
+        break
+    elif opcao == 's':
+        try:
+            num_substituir = int(input("Digite o número da camisa do jogador que sairá: "))
+            jogador_encontrado = False
+            for i in range(len(escalação)):
+                if escalação[i]['camisa'] == str(num_substituir):
+                    novo_nome = input("Nome do novo jogador: ").strip()
+                    novo_numero = input("Número da camisa do novo jogador: ").strip()
+                    escalação[i] = {"nome": novo_nome, "camisa": novo_numero}
+                    substituições_feitas += 1
+                    jogador_encontrado = True
+                    print("Substituição realizada com sucesso.")
+                    break
+            if not jogador_encontrado:
+                print("Camisa não encontrada na escalação atual.")
+        except ValueError:
+            print("Entrada inválida. Tente novamente.")
+    else:
+        print("Opção inválida. Digite 's' ou 'n'.")
+
+# Exibe a escalação final
+exibir_escalação(escalação)
